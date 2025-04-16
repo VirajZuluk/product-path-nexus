@@ -58,31 +58,31 @@ export default function Dashboard() {
       id: "1",
       title: "Customer Inquiry",
       description: "Initial customer contact",
-      status: "completed"
+      status: "completed" as const
     },
     {
       id: "2",
       title: "Product Selection",
       description: "Choose product type",
-      status: "completed"
+      status: "completed" as const
     },
     {
       id: "3",
       title: "Quotation Creation",
       description: "Generate customer quote",
-      status: "current"
+      status: "current" as const
     },
     {
       id: "4",
       title: "Customer Approval",
       description: "Await customer decision",
-      status: "upcoming"
+      status: "upcoming" as const
     },
     {
       id: "5",
       title: "Purchase Order",
       description: "Process purchase order",
-      status: "upcoming"
+      status: "upcoming" as const
     }
   ];
 

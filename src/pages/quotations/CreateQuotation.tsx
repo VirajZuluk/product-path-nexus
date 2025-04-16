@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -71,25 +70,25 @@ export default function CreateQuotation() {
       id: "create",
       title: "Create Quotation",
       description: "Add products & details",
-      status: "current"
+      status: "current" as const
     },
     {
       id: "costing",
       title: "Quotation Costing",
       description: "Calculate pricing",
-      status: "upcoming"
+      status: "upcoming" as const
     },
     {
       id: "terms",
       title: "Terms & Conditions",
       description: "Review legal terms",
-      status: "upcoming"
+      status: "upcoming" as const
     },
     {
       id: "review",
       title: "Final Quote",
       description: "Generate PDF quote",
-      status: "upcoming"
+      status: "upcoming" as const
     }
   ];
   

@@ -30,75 +30,77 @@ import DesignDashboard from "./pages/design/DesignDashboard";
 
 const queryClient = new QueryClient();
 
-const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
+const App = () => {
+  return (
+    <QueryClientProvider client={queryClient}>
       <BrowserRouter>
-        <Routes>
-          <Route path="/" element={
-            <DashboardLayout>
-              <Dashboard />
-            </DashboardLayout>
-          } />
-          
-          {/* Customer Routes */}
-          <Route path="/customers" element={
-            <DashboardLayout>
-              <CustomerDashboard />
-            </DashboardLayout>
-          } />
-          <Route path="/customers/new" element={
-            <DashboardLayout>
-              <CustomerForm />
-            </DashboardLayout>
-          } />
-          
-          {/* Product Routes */}
-          <Route path="/products" element={
-            <DashboardLayout>
-              <ProductDashboard />
-            </DashboardLayout>
-          } />
-          <Route path="/products/type" element={
-            <DashboardLayout>
-              <ProductTypeSelection />
-            </DashboardLayout>
-          } />
-          
-          {/* Quotation Routes */}
-          <Route path="/quotations" element={
-            <DashboardLayout>
-              <QuotationsDashboard />
-            </DashboardLayout>
-          } />
-          <Route path="/quotations/new" element={
-            <DashboardLayout>
-              <CreateQuotation />
-            </DashboardLayout>
-          } />
-          
-          {/* Procurement Routes */}
-          <Route path="/procurement" element={
-            <DashboardLayout>
-              <ProcurementDashboard />
-            </DashboardLayout>
-          } />
-          
-          {/* Design Routes */}
-          <Route path="/design" element={
-            <DashboardLayout>
-              <DesignDashboard />
-            </DashboardLayout>
-          } />
-          
-          {/* Catch-all route */}
-          <Route path="*" element={<NotFound />} />
-        </Routes>
+        <TooltipProvider>
+          <Toaster />
+          <Sonner />
+          <Routes>
+            <Route path="/" element={
+              <DashboardLayout>
+                <Dashboard />
+              </DashboardLayout>
+            } />
+            
+            {/* Customer Routes */}
+            <Route path="/customers" element={
+              <DashboardLayout>
+                <CustomerDashboard />
+              </DashboardLayout>
+            } />
+            <Route path="/customers/new" element={
+              <DashboardLayout>
+                <CustomerForm />
+              </DashboardLayout>
+            } />
+            
+            {/* Product Routes */}
+            <Route path="/products" element={
+              <DashboardLayout>
+                <ProductDashboard />
+              </DashboardLayout>
+            } />
+            <Route path="/products/type" element={
+              <DashboardLayout>
+                <ProductTypeSelection />
+              </DashboardLayout>
+            } />
+            
+            {/* Quotation Routes */}
+            <Route path="/quotations" element={
+              <DashboardLayout>
+                <QuotationsDashboard />
+              </DashboardLayout>
+            } />
+            <Route path="/quotations/new" element={
+              <DashboardLayout>
+                <CreateQuotation />
+              </DashboardLayout>
+            } />
+            
+            {/* Procurement Routes */}
+            <Route path="/procurement" element={
+              <DashboardLayout>
+                <ProcurementDashboard />
+              </DashboardLayout>
+            } />
+            
+            {/* Design Routes */}
+            <Route path="/design" element={
+              <DashboardLayout>
+                <DesignDashboard />
+              </DashboardLayout>
+            } />
+            
+            {/* Catch-all route */}
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </TooltipProvider>
       </BrowserRouter>
-    </TooltipProvider>
-  </QueryClientProvider>
-);
+    </QueryClientProvider>
+  );
+};
 
 export default App;
