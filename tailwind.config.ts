@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,7 +62,32 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+        customer: {
+          DEFAULT: '#0694a2',
+          light: '#d5f5f6',
+          dark: '#065d69'
+        },
+        product: {
+          DEFAULT: '#6366f1',
+          light: '#e0e7ff',
+          dark: '#4338ca'
+        },
+        quotation: {
+          DEFAULT: '#9333ea',
+          light: '#f3e8ff',
+          dark: '#7e22ce'
+        },
+        procurement: {
+          DEFAULT: '#f59e0b',
+          light: '#fef3c7',
+          dark: '#d97706'
+        },
+        design: {
+          DEFAULT: '#10b981',
+          light: '#d1fae5',
+          dark: '#047857'
+        }
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,12 +110,26 @@ export default {
 					to: {
 						height: '0'
 					}
-				}
+				},
+        'fade-in': {
+          '0%': {
+            opacity: '0',
+            transform: 'translateY(10px)'
+          },
+          '100%': {
+            opacity: '1',
+            transform: 'translateY(0)'
+          }
+        }
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
-			}
+				'accordion-up': 'accordion-up 0.2s ease-out',
+        'fade-in': 'fade-in 0.3s ease-out'
+			},
+      fontFamily: {
+        sans: ['Inter var', 'sans-serif'],
+      }
 		}
 	},
 	plugins: [require("tailwindcss-animate")],
