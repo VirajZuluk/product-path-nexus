@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -12,7 +11,10 @@ import {
   FileCheck,
   ClipboardCheck
 } from "lucide-react";
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
+import { NewQuoteForm } from "@/components/teams/procurement/NewQuoteForm";
+import { NewVendorForm } from "@/components/teams/procurement/NewVendorForm";
 
 // Mock data for procurement tasks
 const procurementTasks = [
@@ -60,14 +62,40 @@ export default function ProcurementTeamView() {
           <p className="text-muted-foreground">Manage vendor quotes and procurement tasks</p>
         </div>
         <div className="flex gap-2">
-          <Button variant="outline">
-            <Building className="mr-2 h-4 w-4" />
-            Add Vendor
-          </Button>
-          <Button>
-            <PlusCircle className="mr-2 h-4 w-4" />
-            New Quote Request
-          </Button>
+          <Dialog>
+            <DialogTrigger asChild>
+              <Button variant="outline">
+                <Building className="mr-2 h-4 w-4" />
+                Add Vendor
+              </Button>
+            </DialogTrigger>
+            <DialogContent className="sm:max-w-[600px]">
+              <DialogHeader>
+                <DialogTitle>Add New Vendor</DialogTitle>
+                <DialogDescription>
+                  Fill in the vendor details to add them to your database.
+                </DialogDescription>
+              </DialogHeader>
+              <NewVendorForm />
+            </DialogContent>
+          </Dialog>
+          <Dialog>
+            <DialogTrigger asChild>
+              <Button>
+                <PlusCircle className="mr-2 h-4 w-4" />
+                New Quote Request
+              </Button>
+            </DialogTrigger>
+            <DialogContent className="sm:max-w-[600px]">
+              <DialogHeader>
+                <DialogTitle>Create Quote Request</DialogTitle>
+                <DialogDescription>
+                  Fill in the details for the new quote request.
+                </DialogDescription>
+              </DialogHeader>
+              <NewQuoteForm />
+            </DialogContent>
+          </Dialog>
         </div>
       </div>
 

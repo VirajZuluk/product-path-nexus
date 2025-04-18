@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -13,7 +12,9 @@ import {
   FileSymlink,
   Upload
 } from "lucide-react";
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
+import { NewDesignForm } from "@/components/teams/design/NewDesignForm";
 
 // Mock data for assigned designs
 const assignedDesigns = [
@@ -76,10 +77,23 @@ export default function DesignTeamView() {
             <Upload className="mr-2 h-4 w-4" />
             Upload Specs
           </Button>
-          <Button>
-            <PlusCircle className="mr-2 h-4 w-4" />
-            New Design
-          </Button>
+          <Dialog>
+            <DialogTrigger asChild>
+              <Button>
+                <PlusCircle className="mr-2 h-4 w-4" />
+                New Design
+              </Button>
+            </DialogTrigger>
+            <DialogContent className="sm:max-w-[600px]">
+              <DialogHeader>
+                <DialogTitle>Create New Design</DialogTitle>
+                <DialogDescription>
+                  Fill in the details for the new design specification.
+                </DialogDescription>
+              </DialogHeader>
+              <NewDesignForm />
+            </DialogContent>
+          </Dialog>
         </div>
       </div>
 
