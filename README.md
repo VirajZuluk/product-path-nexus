@@ -1,73 +1,97 @@
-# Welcome to your Lovable project
 
-## Project info
+# Product Path Nexus - Comprehensive Procurement Solution
 
-**URL**: https://lovable.dev/projects/9efe645e-1fca-4e18-8836-302d5e534ba1
+## Overview
+Product Path Nexus is a comprehensive web application designed to streamline the entire product procurement and management process, from initial customer inquiry to final purchase order.
 
-## How can I edit this code?
+## Workflow Stages
 
-There are several ways of editing your application.
+### 1. Customer Management
+- **Entry Point**: Customer Inquiry Dashboard
+  - Add new customers
+  - Search existing customer database
+- **Customer Form**
+  - Create and edit customer details
+  - Auto-generation of customer registration ID
 
-**Use Lovable**
+### 2. Product Management
+- **Product Type Selection**
+  - Choose between Standard and Non-standard products
+- **Routing Logic**
+  - Standard Products → Design Workflow
+  - Non-standard Products → Procurement Workflow
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/9efe645e-1fca-4e18-8836-302d5e534ba1) and start prompting.
+### 3. Quotation Management
+- **Quotation Creation**
+  - Add customer details
+  - Select and add products
+  - Input additional queries/feedback
+- **Costing Process**
+  - Input manufacturing costs
+  - Add vendor pricing
+  - Calculate total with additional charges
+- **Terms & Conditions**
+  - Editable review of terms
+- **Final Quotation**
+  - Generate unique quotation ID
+  - Options to email or download PDF
+- **Customer Feedback**
+  - Accept or reject quotation
+  - Add comments
 
-Changes made via Lovable will be committed automatically to this repo.
+### 4. Procurement Workflow (Non-Standard Items)
+- **Vendor Management**
+  - Upload and manage vendor information
+- **Vendor Quotation Collection**
+  - Gather at least 3 quotes
+  - Compare pricing and lead times
+- **Quotation Comparison**
+  - Evaluate cost, quality, and lead time
+- **Engineering Approval**
+  - Engineering team selects best vendor
+- **Final Vendor Selection**
+  - System records final vendor choice
 
-**Use your preferred IDE**
+### 5. Design Workflow (Standard Items)
+- **Design Team Interface**
+  - Input raw material list
+  - Attach manufacturing information
+  - Auto-generate design ID
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### 6. Purchase Order (PO) Management
+- **Customer PO Upload**
+  - Upload or manually enter PO information
+  - Auto-generate PO ID
+- **Confirmation**
+  - Display summary of purchase
+- **Project Completion**
+  - System status changes to STOP
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## Technical Stack
+- Framework: React
+- Language: TypeScript
+- Styling: Tailwind CSS
+- UI Components: Shadcn/UI
+- State Management: React Query
+- Routing: React Router
 
-Follow these steps:
+## Key Features
+- Modular design
+- Seamless workflow integration
+- Automated ID generation
+- Comprehensive tracking
+- Flexible product management
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+## Getting Started
+1. Clone the repository
+2. Install dependencies: `npm install`
+3. Run the development server: `npm run dev`
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+## Deployment
+Deploy through Lovable platform or your preferred hosting service.
 
-# Step 3: Install the necessary dependencies.
-npm i
+## License
+[Your License Information]
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/9efe645e-1fca-4e18-8836-302d5e534ba1) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+## Contact
+[Your Contact Information]
