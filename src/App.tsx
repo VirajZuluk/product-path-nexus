@@ -1,4 +1,3 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -27,6 +26,10 @@ import ProcurementDashboard from "./pages/procurement/ProcurementDashboard";
 
 // Design Pages
 import DesignDashboard from "./pages/design/DesignDashboard";
+
+// Team Pages
+import DesignTeamView from "./pages/teams/design/DesignTeamView";
+import ProcurementTeamView from "./pages/teams/procurement/ProcurementTeamView";
 
 const queryClient = new QueryClient();
 
@@ -91,6 +94,18 @@ const App = () => {
             <Route path="/design" element={
               <DashboardLayout>
                 <DesignDashboard />
+              </DashboardLayout>
+            } />
+            
+            {/* Team Routes */}
+            <Route path="/teams/design" element={
+              <DashboardLayout>
+                <DesignTeamView />
+              </DashboardLayout>
+            } />
+            <Route path="/teams/procurement" element={
+              <DashboardLayout>
+                <ProcurementTeamView />
               </DashboardLayout>
             } />
             
